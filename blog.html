@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="style.css">
+<style type="text/css" id="dcoder_stylesheet">body {
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+section {
+    width: 100%;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}</style></head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="post">
+            <h2>Meu Primeiro Post</h2>
+            <p>Este é meu primeiro post no blog. Estou muito animado para compartilhar minhas ideias e pensamentos com vocês.</p>
+            <p>Eu sou um desenvolvedor de software e tenho paixão por tecnologia. Gosto de aprender coisas novas e sempre estou procurando novas maneiras de melhorar minhas habilidades.</p>
+            <p>Espero que gostem do meu blog!</p>
+        </section>
+        <section class="post">
+            <h2>Meu Segundo Post</h2>
+            <p>Este é meu segundo post no blog. Neste post, vou falar sobre minha experiência como desenvolvedor de software.</p>
+            <p>Sou desenvolvedor há 5 anos e já trabalhei em projetos de todos os tamanhos, desde pequenas startups até grandes empresas.</p>
+            <p>Gosto do desafio de trabalhar em novos projetos e sempre estou procurando maneiras de melhorar minhas habilidades.</p>
+            <p>Espero que este post seja útil para quem está pensando em se tornar um desenvolvedor de software.</p>
+        </section>
+    </main>
+    <footer>
+        © 2023 Meu Blog
+    </footer>
+
+<script type="text/javascript" id="dcoder_script">// Pega os links do menu de navegação
+const links = document.querySelectorAll("nav a");
+
+// Define uma função para ativar um link
+function activateLink(link) {
+  // Esconde todos os outros links
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
+  }
+
+  // Ativa o link selecionado
+  link.classList.add("active");
+
+  // Move o conteúdo para a seção correspondente
+  const section = document.querySelector("section.post[id=" + link.getAttribute("href") + "]");
+  section.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+// Vincula a função aos links
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", activateLink);
+}</script></body></html>
